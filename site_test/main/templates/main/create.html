@@ -1,0 +1,22 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Create
+{% endblock %}
+
+{% block title2 %}
+    Страница про нас
+{% endblock %}
+
+{% block content %}
+<h1 xmlns="http://www.w3.org/1999/html">Create</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{form.title}}<br>
+        {{form.task}}<br>
+<!--        <input typr="text" placeholder="Name" class="form-control"><br>-->
+<!--        <textarea placeholder="Описанеи" class="form-control"></textarea></br>-->
+        <button type="submit" class="'btn btn-success"> Добавить </button>
+        <span>{{ error }}</span>
+    </form>
+{% endblock %}
